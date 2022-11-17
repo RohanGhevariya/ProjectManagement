@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Splash from './Splash'
 import Login from './Login'
+import Home from './Home'
 
 const AppNavigator = () => {
   const Stack = createNativeStackNavigator();
@@ -19,7 +20,14 @@ const AppNavigator = () => {
           options={{ headerShown: false }}
           name="Login"
           component={Login} />
+
+      <Stack.Screen
+          options={{ headerShown: false }}
+          name="Home"
+          component={Home} />
+
       </Stack.Navigator>
+
     </NavigationContainer>
   )
 }
